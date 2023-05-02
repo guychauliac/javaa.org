@@ -1,10 +1,20 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Building a blog site with Jekyll, Github pages and docker"
 date:   2023-05-02 19:24:31 +0000
-categories: jekyll update
+categories: jekyll docker github pages
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Yes this is my first blog post! What better to start with then to explain how this blog was created with Jekyll, Github pages and docker.
+
+# Why Jekyll ?
+
+[Jekyll](https://jekyllrb.com/) is an open source static file generator.  It allows you to write a static website in markup language.  As my expertise lies in other IT domains than front end design this sounded like a perfect match.
+
+# Why Github pages
+
+[Github pages](https://pages.github.com/) allows to host a website linked to a github repository.  Any content pushed on a github repository can immediately be served as a static website.  Additionally it's free and works well together with Jekyll.
+
+
 
 Jekyll requires blog post files to be named according to the following format:
 
