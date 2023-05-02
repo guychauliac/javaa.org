@@ -20,11 +20,11 @@
 
 title: MaxxQ Blog
 email: guy.chauliac@maxxq.org
-description: >- # this means to ignore newlines until "baseurl:"
-  Blog site about topics of my interest: Java, Python, Docker, Security, OO Programming
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Blog site about topics of my interest: Java, Python, Docker, Security, OO Programming
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://maxxq.org" 
-twitter_username: Chabernac
+#twitter_username: Chabernac
 github_username:  guychauliac
 
 # Build settings
