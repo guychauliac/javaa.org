@@ -14,26 +14,56 @@ Yes this is my first blog post! What better to start with then to explain how th
 
 [Github pages](https://pages.github.com/) allows to host a website linked to a github repository.  Any content pushed on a github repository can immediately be served as a static website.  Additionally it's free and works well together with Jekyll.
 
+# Why docker
 
+I want to be able to test the blog website locally.  Jekyll is running on Ruby.  As I'm developping on a windows machine I did not want to go trough the hastle of having to install Ruby.  However I must say that in the end it took me a while to get things running in docker.
 
-Jekyll requires blog post files to be named according to the following format:
+## Preparing a docker image
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Github pages can only be used with a [specific version of Ruby And Jekyll](https://pages.github.com/versions/). 
+Let's define a docker images that uses the Ruby 2.7 alpine images and use apk to install the Jekyll 3.9.3 Gem:
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Create a dockerfile:
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight docker %}
+	FROM ruby:2.7-alpine
+	RUN apk update
+	RUN apk add --no-cache build-base gcc cmake git
+	RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.3
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Now build the docker image:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+	docker build -t jekyll .
+	
+During my tests I did not succeed mouting a windows folder to the a path in the container so decided to work with a docker volume.
+Create the volume:
+
+	docker create volume jekyllvolume
+	
+And launch a shell in the docker image with 
+
+	docker run -it --name jekyllvolume -p 8080:4000 -v jekyllvolume:/usr/src jekyll sh
+	
+	-p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
+	-v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
+	
+Test if Jekyll 3.9.3 is correctly available
+
+	Jekyll --version
+	
+Navigate to the /usr/src folder and create our fresh Jekyll site
+
+	cd /usr/src
+	jekyll new mysite
+	
+A folder mysite is being created with several new files
+Go inside of the folder and start serving the Jekyll website
+
+	cd mysite
+	jekyll serve --hosts 0.0.0.0
+	
+The --hosts 0.0.0.0 will tell Jekyll to run on all network interfaces.  
+
+Check on the host system if the Jekyll website can be reached by browsing to http://localhost:8080
+	
