@@ -59,9 +59,25 @@ However it cannot be tested yet from the host as no ports are being exposed
 	
 	jekyll new . --force    #--force will overwrite existing jekyll files
 	
-* container starfossen *
+*gem install*
 
-	docker run -it --name starefossen -p 8080:4000 -v maxxq:/usr/src starefossen/github-pages
+on the folder where the gem file is located executed
+
+	bundle install
+	
+then run 
+
+	 bundle clean --force
+	
+to remove unwanted gems globally installed
+
+then serve jekyll 
+	
+
+
+
+
+		
 
 
 
