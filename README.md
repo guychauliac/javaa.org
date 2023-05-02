@@ -58,6 +58,10 @@ However it cannot be tested yet from the host as no ports are being exposed
 *initialize the jekyll website in the current directory*
 	
 	jekyll new . --force    #--force will overwrite existing jekyll files
+	
+* container starfossen *
+
+	docker run -it --name starefossen -p 8080:4000 -v maxxq:/usr/src starefossen/github-pages
 
 
 
