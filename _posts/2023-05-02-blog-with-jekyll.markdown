@@ -71,4 +71,4 @@ Check on the host system if the Jekyll website can be reached by browsing to [ht
 
 ## Applying changes
 
-{% post_url 2023-05-03-publish-jekyll-page-to-github %}
+Next post will talk about how to [publish a jekyll page on github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
