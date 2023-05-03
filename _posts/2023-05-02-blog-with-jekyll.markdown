@@ -69,6 +69,6 @@ The --hosts 0.0.0.0 will tell Jekyll to run on all network interfaces.
 
 Check on the host system if the Jekyll website can be reached by browsing to [http://localhost:8080](http://localhost:8080)
 
-## Applying changes
+## Publishing to github pages
 
-Next post will talk about how to [publish a jekyll page on github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
+My next post will talk about how to [publish a jekyll page on github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
