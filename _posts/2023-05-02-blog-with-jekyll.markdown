@@ -10,11 +10,11 @@ Yes this is my first blog post! What better to start with then to explain how th
 
 [Jekyll](https://jekyllrb.com/) is an open source static file generator.  It allows you to write a static website in markup language.  As my expertise lies in other IT domains than front end design this sounded like a perfect match.
 
-# Why Github pages
+# Why Github pages ?
 
 [Github pages](https://pages.github.com/) allows to host a website linked to a github repository.  Any content pushed on a github repository can immediately be served as a static website.  Additionally it's free and works well together with Jekyll.
 
-# Why docker
+# Why docker ?
 
 I want to be able to test the blog website locally.  Jekyll is running on Ruby.  As I'm developping on a windows machine I did not want to go trough the hastle of having to install Ruby.  However I must say that in the end it took me a while to get things running in docker.
 
