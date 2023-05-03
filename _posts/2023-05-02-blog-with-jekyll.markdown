@@ -71,6 +71,6 @@ Check on the host system if the Jekyll website can be reached by browsing to [ht
 
 ## Applying changes
 
-{% 2023-05-03-publish-jekyll-page-to-github.markdown %}
+{% post_url 2023-05-03-publish-jekyll-page-to-github.markdown %}
 
 	
