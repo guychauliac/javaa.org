@@ -26,29 +26,31 @@ Let's define a docker images that uses the Ruby 2.7 alpine images and use apk to
 Create a dockerfile:
 
 {% highlight docker %}
-	FROM ruby:2.7-alpine
-	RUN apk update
-	RUN apk add --no-cache build-base gcc cmake git
-	RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.3
+FROM ruby:2.7-alpine
+RUN apk update
+RUN apk add --no-cache build-base gcc cmake git
+RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.3
 {% endhighlight %}
 
 Now build the docker image:
 
 	docker build -t jekyll .
 	
-During my tests I did not succeed mouting a windows folder to the a path in the container so decided to work with a docker volume.
+During my tests I did not succeed mounting a windows folder to a path in the container so I decided to work with a docker volume instead.
 Create the volume:
 
 	docker create volume jekyllvolume
 	
-And launch a shell in the docker image with 
+Launch a shell in the docker container:
 
 	docker run -it --name jekyllvolume -p 8080:4000 -v jekyllvolume:/usr/src jekyll sh
 	
 	-p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
 	-v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
+
+## Launch Jekyll in the container 
 	
-Test if Jekyll 3.9.3 is correctly available
+Within the shell of the container test if Jekyll 3.9.3 is correctly available
 
 	Jekyll --version
 	
@@ -65,5 +67,9 @@ Go inside of the folder and start serving the Jekyll website
 	
 The --hosts 0.0.0.0 will tell Jekyll to run on all network interfaces.  
 
-Check on the host system if the Jekyll website can be reached by browsing to http://localhost:8080
+Check on the host system if the Jekyll website can be reached by browsing to [http://localhost:8080](http://localhost:8080)
+
+## Applying changes
+
+
 	
