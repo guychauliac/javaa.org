@@ -6,19 +6,19 @@ categories: jekyll docker github pages
 ---
 Yes this is my first blog post! What better to start with then to explain how this blog was created with Jekyll, Github pages and docker.
 
-# Why Jekyll ?
+## Why Jekyll ?
 
 [Jekyll](https://jekyllrb.com/) is an open source static file generator.  It allows you to write a static website in markup language.  As my expertise lies in other IT domains than front end design this sounded like a perfect match.
 
-# Why Github pages ?
+## Why Github pages ?
 
 [Github pages](https://pages.github.com/) allows to host a website linked to a github repository.  Any content pushed on a github repository can immediately be served as a static website.  Additionally it's free and works well together with Jekyll.
 
-# Why docker ?
+## Why docker ?
 
 I want to be able to test the blog website locally.  Jekyll is running on Ruby.  As I'm developping on a windows machine I did not want to go trough the hastle of having to install Ruby.  However I must say that in the end it took me a while to get things running in docker.
 
-## Preparing a docker image
+### Preparing a docker image
 
 Github pages can only be used with a [specific version of Ruby And Jekyll](https://pages.github.com/versions/). 
 Let's define a docker images that uses the Ruby 2.7 alpine images and use apk to install the Jekyll 3.9.3 Gem:
@@ -48,7 +48,7 @@ Launch a shell in the docker container:
 	-p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
 	-v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
 
-## Launch Jekyll in the container 
+### Launch Jekyll in the container 
 	
 Within the shell of the container test if Jekyll 3.9.3 is correctly available
 
