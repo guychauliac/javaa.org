@@ -41,31 +41,41 @@ docker build -t jekyll .
 During my tests I did not succeed mounting a windows folder to a path in the container so I decided to work with a docker volume instead.
 Create the volume:
 
-	docker create volume jekyllvolume
-	
+{% highlight docker %}
+docker create volume jekyllvolume
+{% endhighlight %}	
+
 Launch a shell in the docker container:
 
-	docker run -it --name jekyllvolume -p 8080:4000 -v jekyllvolume:/usr/src jekyll sh
+{% highlight docker %}
+docker run -it --name jekyllvolume -p 8080:4000 -v jekyllvolume:/usr/src jekyll sh
 	
-	-p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
-	-v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
+-p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
+-v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
+{% endhighlight %}	
 
 ### Launch Jekyll in the container 
 	
 Within the shell of the container test if Jekyll 3.9.3 is correctly available
 
-	Jekyll --version
+{% highlight shell %}
+Jekyll --version
+{% endhighlight %}	
 	
 Navigate to the /usr/src folder and create our fresh Jekyll site
 
-	cd /usr/src
-	jekyll new mysite
+{% highlight shell %}
+cd /usr/src
+jekyll new mysite
+{% endhighlight %}	
 	
 A folder mysite is being created with several new files
 Go inside of the folder and start serving the Jekyll website
 
-	cd mysite
-	jekyll serve --hosts 0.0.0.0
+{% highlight shell %}
+cd mysite
+jekyll serve --hosts 0.0.0.0
+{% endhighlight %}	
 	
 The --hosts 0.0.0.0 will tell Jekyll to run on all network interfaces.  
 
