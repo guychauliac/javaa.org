@@ -28,9 +28,11 @@ url: "https://maxxq.org"
 github_username:  guychauliac
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
+
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   
 # Google Analytics
 google_analytics: G-WNNTGH0123
