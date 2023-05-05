@@ -34,7 +34,7 @@ RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.
 
 Now build the docker image:
 
-{% highlight shell %}
+{% highlight docker %}
 docker build -t jekyll .
 {% endhighlight %}
 	
