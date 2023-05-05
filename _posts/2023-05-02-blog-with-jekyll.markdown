@@ -34,7 +34,9 @@ RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.
 
 Now build the docker image:
 
-	docker build -t jekyll .
+{% highlight bash %}
+docker build -t jekyll .
+{% endhighlight %}
 	
 During my tests I did not succeed mounting a windows folder to a path in the container so I decided to work with a docker volume instead.
 Create the volume:
