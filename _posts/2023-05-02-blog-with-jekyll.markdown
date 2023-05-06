@@ -2,7 +2,7 @@
 layout: post
 title:  "Building a blog site with Jekyll, Github pages and docker"
 date:   2023-05-02 19:24:31 +0000
-categories: jekyll docker github pages
+categories: [jekyll,docker,github pages]
 ---
 Yes this is my first blog post! What better to start with then to explain how this blog was created with Jekyll, Github pages and docker.
 
@@ -38,21 +38,16 @@ Now build the docker image:
 docker build -t jekyll .
 {% endhighlight %}
 	
-During my tests I did not succeed mounting a windows folder to a path in the container so I decided to work with a docker volume instead.
-Create the volume:
-
-{% highlight docker %}
-docker create volume jekyllvolume
-{% endhighlight %}	
-
 Launch a shell in the docker container:
 
 {% highlight docker %}
-docker run -it --name jekyllvolume -p 8080:4000 -v jekyllvolume:/usr/src jekyll sh
+docker run -it --name jekyll -p 8080:4000 -v /mnt/c/sitefolder:/usr/src sh
 	
 -p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
--v jekyllvolume:/usr/src will mount the volume 'jekyllvolume' to the path /usr/src in the docker container
+-v /mnt/c/sitefolder:/usr/src will mount the local folder /c/sitefolder to the path /usr/src in the docker container
 {% endhighlight %}	
+
+I'm running docker on a windows systems, to make folder mounting to work correctly docker is running in 'linux containers' mode, WSL2 is activated and the command shown above is executed from the ubuntu Windows Subsystem for Linux shell.
 
 ### Launch Jekyll in the container 
 	
@@ -74,12 +69,16 @@ Go inside of the folder and start serving the Jekyll website
 
 {% highlight shell %}
 cd mysite
-jekyll serve --hosts 0.0.0.0
+jekyll serve --host 0.0.0.0
 {% endhighlight %}	
 	
-The --hosts 0.0.0.0 will tell Jekyll to run on all network interfaces.  
+'--hosts' 0.0.0.0 will tell Jekyll to run on all network interfaces.  
 
 Check on the host system if the Jekyll website can be reached by browsing to [http://localhost:8080](http://localhost:8080)
+
+### Applying changes
+
+Whenever a change is made to any of the files use **jekyll build** to regenerate the html content.  The jekyll build needs to be executed from within the container.  This can be achieved by running a second shell in the container.
 
 ## Publishing to github pages
 

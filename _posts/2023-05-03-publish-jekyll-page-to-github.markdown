@@ -2,7 +2,7 @@
 layout: post
 title:  "Publishing a Jekyll site with github pages"
 date:   2023-05-03 08:00:00 +0000
-categories: jekyll docker github pages
+categories: [jekyll,docker,github pages]
 ---
 
 On the [previous post]({% post_url 2023-05-02-blog-with-jekyll %}) I explained how a Jekyll blog site compatible with github pages can be created and how docker can be used to test the website locally.
@@ -30,13 +30,13 @@ Change the repo settings on github.com
 
 Select the branch on which the code was pushed
 
-![github pages settings](github_pages.png)
+![github pages settings](/assets/images/github_pages.png)
 
 From the moment github pages is configured a github action will run to publish the site.  
 
-![github pages action](github_pages_action.png)
+![github pages action](/assets/images/github_pages_action.png)
 
-After the github action has run the generated site can be consulted.
+After the github action has run the generated site can be consulted on the Url as shown on the github actions deploy step output.
 
 
 
