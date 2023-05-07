@@ -4,4 +4,3 @@
 
 layout: home
 ---
-[OAuth Debugger](https://guychauliac.github.io/oauthgrant/)
