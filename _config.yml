@@ -27,6 +27,9 @@ url: "https://maxxq.org"
 #twitter_username: Chabernac
 github_username:  guychauliac
 
+header_pages:
+  - noheader.md
+
 # Build settings
 remote_theme: jekyll/minima
 
