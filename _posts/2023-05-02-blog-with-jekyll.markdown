@@ -41,7 +41,7 @@ docker build -t jekyll .
 Launch a shell in the docker container:
 
 {% highlight docker %}
-docker run -it --name jekyll -p 8080:4000 -v /mnt/c/sitefolder:/usr/src sh
+docker run -it --name jekyllcontainer -p 8080:4000 -v /mnt/c/sitefolder:/usr/src jekyll sh
 	
 -p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
 -v /mnt/c/sitefolder:/usr/src will mount the local folder /c/sitefolder to the path /usr/src in the docker container
@@ -78,7 +78,9 @@ Check on the host system if the Jekyll website can be reached by browsing to [ht
 
 ### Applying changes
 
-Whenever a change is made to any of the files use **jekyll build** to regenerate the html content.  The jekyll build needs to be executed from within the container.  This can be achieved by running a second shell in the container.
+Whenever a change is made to any of the files jekyll needs to regenerate the html content.  The jekyll build command needs to be executed from within the container.  This can be achieved by running a second shell in the docker container, then executing **jekyll build** from the /usr/src folder
+
+![jekyll build](/assets/images/jekyll_build.png)
 
 ## Publishing to github pages
 
