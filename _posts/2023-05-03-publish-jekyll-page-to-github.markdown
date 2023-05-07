@@ -38,5 +38,6 @@ From the moment github pages is configured a github action will run to publish t
 
 After the github action has run the generated site can be consulted on the Url as shown on the github actions deploy step output.
 
+Next post will show how to [add google analytics to the jekyll pages]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
 
 

@@ -72,13 +72,15 @@ cd mysite
 jekyll serve --host 0.0.0.0
 {% endhighlight %}	
 	
-'--hosts' 0.0.0.0 will tell Jekyll to run on all network interfaces.  
+'--hosts 0.0.0.0' will tell Jekyll to run on all network interfaces.  
 
 Check on the host system if the Jekyll website can be reached by browsing to [http://localhost:8080](http://localhost:8080)
 
-### Applying changes
+### Modifying content
 
-Whenever a change is made to any of the files jekyll needs to regenerate the html content.  The jekyll build command needs to be executed from within the container.  This can be achieved by running a second shell in the docker container, then executing **jekyll build** from the /usr/src folder
+After creation of a new Jekyll site an example post is created in the _posts folder.  To create a new post just copy the existing post and modify the name and content. 
+
+Whenever a change is made to any of the files jekyll needs to regenerate the html content.  Execute the **jekyll build** command  from within the container.  This can be achieved by running a second shell in the docker container.
 
 ![jekyll build](/assets/images/jekyll_build.png)
 

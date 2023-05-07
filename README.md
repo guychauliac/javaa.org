@@ -67,7 +67,7 @@ on the folder where the gem file is located executed
 	
 then run 
 
-	 			
+	 bundle clean --force
 	
 to remove unwanted gems globally installed
 
