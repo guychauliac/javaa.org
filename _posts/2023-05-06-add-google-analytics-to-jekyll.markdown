@@ -20,7 +20,7 @@ google_analytics: G-XXXXXXXXXX
 {% endhighlight %}
 
 
-GA4 is not yet supported on the latest release version of Jekyll. However it's already supported on the minima github repository.
+GA4 is not yet supported on the latest release version of minima theme. However it's already supported on the minima github repository.
 Jekyll can be instructed to directly use the source code from github for a Jekyll theme. To do so add the 'jekyll-remote-theme' to the list of plugins in _config.yaml.  Next remove the line containing 'theme: minima' and replace it with 'remote_theme: jekyll/minima'
 
 your _config.yaml will now contain:
