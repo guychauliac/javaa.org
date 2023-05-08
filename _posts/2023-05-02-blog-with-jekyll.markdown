@@ -19,7 +19,7 @@ Yes this is my first blog post! What better to start with then to explain how th
 
 ## Why docker ?
 
-I want to be able to test the blog website locally.  Jekyll is running on Ruby.  As I'm developping on a windows machine I did not want to go trough the hastle of having to install Ruby.  However I must say that in the end it took me a while to get things running in docker.
+I want to be able to test the blog website locally.  Jekyll is running on Ruby.  As I'm developping on a windows machine I did not want to go trough the hastle of having to install Ruby. 
 
 ### Preparing a docker image
 

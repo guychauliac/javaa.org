@@ -62,5 +62,7 @@ jekyll build
 
 All these actions can be done while the jekyll server is still running.
 
+In the next post we'll have look how to [put advertising on a Jekyll site]({% post_url 2023-05-08-add-google-adsense-to-jekyll %}) to generate some revenue.
+
 
  
