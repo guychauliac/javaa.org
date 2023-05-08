@@ -5,8 +5,8 @@ date:   2023-05-07 08:08:00 +0000
 categories: [jekyll,docker,github pages]
 ---
 
-[Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-blog-with-jekyll %})
+[1. Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-blog-with-jekyll %})
 
-[Publishing a Jekyll site with github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
+[2. Publishing a Jekyll site with github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
 
-[Add google analytics to Jekyll pages minima theme]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
+[3. Add google analytics to Jekyll pages minima theme]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
