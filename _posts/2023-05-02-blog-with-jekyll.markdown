@@ -4,7 +4,10 @@ title:  "Building a blog site with Jekyll, Github pages and docker"
 date:   2023-05-02 19:24:31 +0000
 categories: [jekyll,docker,github pages]
 ---
+> [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
+
 Yes this is my first blog post! What better to start with then to explain how this blog was created with Jekyll, Github pages and docker.
+
 
 ## Why Jekyll ?
 
