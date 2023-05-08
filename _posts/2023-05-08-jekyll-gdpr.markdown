@@ -8,3 +8,7 @@ categories: [jekyll,docker,github pages, gdpr]
 
 [cookie consent banner](https://jekyllcodex.org/without-plugin/cookie-consent/#:~:text=To%20be%20compliant%20with%20the,Approve'%20in%20a%20cookie%20banner.)
 
+chat gpt prompt
+
+Give me an example of a GDPR policy that I need to add to my site if my site is using google analytics and google AdSense
+
