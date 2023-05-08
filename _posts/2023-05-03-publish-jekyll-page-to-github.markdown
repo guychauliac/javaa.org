@@ -4,6 +4,7 @@ title:  "Publishing a Jekyll site with github pages"
 date:   2023-05-03 08:00:00 +0000
 categories: [jekyll,docker,github pages]
 ---
+> [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
 
 On the [previous post]({% post_url 2023-05-02-blog-with-jekyll %}) I explained how a Jekyll blog site compatible with github pages can be created and how docker can be used to test the website locally.
 
