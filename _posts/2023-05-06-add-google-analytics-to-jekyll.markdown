@@ -4,6 +4,7 @@ title:  "Add google analytics to Jekyll pages minima theme"
 date:   2023-05-06 18:00:00 +0000
 categories: [jekyll,docker,github pages]
 ---
+> [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
 
 By default when generating a new Jekyll site the '[Minima](https://github.com/jekyll/minima)' theme will be applied.  The minima theme has already incorporated support for google analytics, we'll see how to configure it later.  
 
