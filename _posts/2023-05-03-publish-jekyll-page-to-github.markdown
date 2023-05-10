@@ -2,7 +2,7 @@
 layout: post
 title:  "Publishing a Jekyll site with github pages"
 date:   2023-05-03 08:00:00 +0000
-categories: [jekyll,docker,github pages]
+categories: [jekyll]
 ---
 > [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
 

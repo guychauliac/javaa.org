@@ -2,7 +2,7 @@
 layout: post
 title:  "Adding advertising to Jekyll"
 date:   2023-05-08 18:37:00 +0000
-categories: [jekyll,docker,github pages,AdSense]
+categories: [jekyll]
 ---
 > [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
 
