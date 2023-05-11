@@ -39,6 +39,7 @@ plugins:
   
 # Google Analytics
 google_analytics: G-WNNTGH0123
+google_adsense: ca-pub-8864434715362999
 
 # Exclude from processing.
 # The following items will not be processed, by default.
