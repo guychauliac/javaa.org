@@ -32,7 +32,7 @@
     }
 
     if(readCookie('cookie-notice-dismissed')=='true') {
-        {% include ga.js %}
+        {% include include_on_gdpr_consent.js %}
     } else {
         document.getElementById('cookie-notice').style.display = 'block';
     }

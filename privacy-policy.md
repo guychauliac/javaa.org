@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy
-permalink: /GDPR privacy policy/
+permalink: /privacy/
 ---
 
 ## GDPR Policy for Google Analytics and Google AdSense
