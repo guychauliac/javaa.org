@@ -29,6 +29,7 @@ github_username:  guychauliac
 
 header_pages:
   - privacy-policy.md
+  - contact.md
 
 # Build settings
 remote_theme: jekyll/minima
