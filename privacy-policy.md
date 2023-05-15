@@ -22,4 +22,4 @@ permalink: /privacy/
 
 8. **Changes to Policy:** We reserve the right to update this policy at any time. Changes will be posted on our website.
 
-9. **Contact Us:** If you have any questions or concerns about this policy, please contact us at [insert contact information].
+9. **Contact Us:** If you have any questions or concerns about this policy, please [contact us](/contact).

@@ -12,3 +12,5 @@ categories: [jekyll]
 [3. Add google analytics to Jekyll pages minima theme]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
 
 [4. Add google AdSense to Jekyll pages]({% post_url 2023-05-08-add-google-adsense-to-jekyll %})
+
+[5. Building a GDPR compliant Jekyll site]({% post_url 2023-05-14-jekyll-gdpr %})
