@@ -7,7 +7,7 @@ categories: [jekyll]
 > [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
 
 ## What is personal data ?
-A jekyll website used within the EU that somehow collects data that can lead to the identification a living individual is obliged to follow the regulations as stated by the [General Data Protection Regulation (GDPR)](https://gdpr.eu/tag/gdpr/).  This data is being referred to as [personal data](https://gdpr.eu/eu-gdpr-personal-data/).
+A jekyll website used within the EU that collects data that can lead to the identification a living individual is obliged to follow the regulations as stated by the [General Data Protection Regulation (GDPR)](https://gdpr.eu/tag/gdpr/).  This data is being referred to as [personal data](https://gdpr.eu/eu-gdpr-personal-data/).
 
 Tracking cookies used by Google Analytics and Google AdSense is being considered as personal data and as such the [regulations of GDPR](https://gdpr.eu/cookies/) needs to be followed.
 
@@ -31,7 +31,7 @@ Make sure to verify that each phrasing in the generated policy is true and is ma
 
 ## Asking for user consent
 
-For a website asking user consent involves informing the user about the usage of private data and asking him to consent for each type of private data that is being collected.  Only when the user gives his consent for a certain type of private data the corresponding script that collect and generate the private data and cookies can be activated.
+Asking user consent involves also informing the user about the usage of private data and asking him to consent for each type of private data that is being collected.  Only when the user gives his consent for a certain type of private data the corresponding script that collect and generate the private data and cookies can be activated.
 
 During my search for an easy way to build a cookie consent dialog I came across this [excellent github repo](https://github.com/orestbida/cookieconsent).
 
