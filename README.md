@@ -74,6 +74,8 @@ to remove unwanted gems globally installed
 then serve jekyll 
 
 https://github.com/orestbida/cookieconsent
+
+https://www.ethicalads.io/publishers/
 	
 
 
