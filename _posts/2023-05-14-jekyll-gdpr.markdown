@@ -62,9 +62,11 @@ The example below shows how to conditionally load the scripts of google Analytic
 <script defer src="/assets/js/cookieconsent.js"></script>
 <script defer src="/assets/js/cookieconsent-init.js"></script>
 
-<!-- following scripts are only loaded according to the consent given by the user -->   
+{%- if jekyll.environment == 'production' and site.google_adsense -%}
 <script defer type="text/plain" data-cookiecategory="targeting" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
+{%- endif -%}
 
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
 <script async type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script type="text/plain" data-cookiecategory="analytics">
 	  window['ga-disable-{{ site.google_analytics }}'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
@@ -74,6 +76,7 @@ The example below shows how to conditionally load the scripts of google Analytic
 	
 	  gtag('config', '{{ site.google_analytics }}');
 </script>
+{%- endif -%}
 {% endraw %}
 {% endhighlight %}
 
