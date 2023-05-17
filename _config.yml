@@ -34,10 +34,14 @@ header_pages:
 # Build settings
 remote_theme: jekyll/minima
 
+url: "https://www.maxxq.org"
+
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-  
+  - jekyll-sitemap
+
+
 # Google Analytics
 google_analytics: G-WNNTGH0123
 google_adsense: ca-pub-8864434715362999
