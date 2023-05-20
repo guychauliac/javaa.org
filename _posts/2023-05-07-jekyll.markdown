@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Building a site with Jekyll - INDEX"
+title:  "Building a site with Jekyll for hosting on github pages"
 date:   2023-05-07 08:08:00 +0000
 categories: [jekyll]
 ---
 
-[1. Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-blog-with-jekyll %})
+[0. Intro - Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-jekyll-intro %})
+
+[1. Testing a jekyll website with docker locally]({% post_url 2023-05-02-jekyll-docker-local-testing %})
 
 [2. Publishing a Jekyll site with github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
 

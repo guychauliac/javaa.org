@@ -4,7 +4,9 @@ title:  "Building a GDPR compliant Jekyll site"
 date:   2023-05-14 19:45:00 +0000
 categories: [jekyll]
 ---
-> [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
+> [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
+
+In this blogpost we will explore the European rules on data protection and how you can ensure compliance with GDPR for your jekyll website.
 
 ## What is personal data ?
 A jekyll website used within the EU that collects data that can lead to the identification a living individual is obliged to follow the regulations as stated by the [General Data Protection Regulation (GDPR)](https://gdpr.eu/tag/gdpr/).  This data is being referred to as [personal data](https://gdpr.eu/eu-gdpr-personal-data/).

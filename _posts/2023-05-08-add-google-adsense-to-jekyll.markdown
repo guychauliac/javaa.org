@@ -4,7 +4,9 @@ title:  "Adding advertising to Jekyll"
 date:   2023-05-08 18:37:00 +0000
 categories: [jekyll]
 ---
-> [This blog post is part of a series around building a website with Jekyll]({% post_url 2023-05-07-jekyll %})
+> [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
+
+In this blogpost we will have a look on how advertising can be added to a Jekyll website.
 
 As this is the first time I'm adding advertising on a site I'll be updating this post when I gain more insights.
 
