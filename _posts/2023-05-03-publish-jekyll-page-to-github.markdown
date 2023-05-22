@@ -20,7 +20,7 @@ git remote add origin https://github.com/yourrepo.git
 git push -u origin main
 {% endhighlight %}
 
-A .gitignore file was already create during initialiaztion of the Jekyll site.  It will make sure that the generated code is not pushed to github.  After activating github pages on the github repo a [github action](https://github.com/features/actions) will make sure the html code is regenerated from the Jekyll pages. 
+A .gitignore file was already create during initialization of the Jekyll site.  It will make sure that the generated code is not pushed to github.  After activating github pages on the github repo a [github action](https://github.com/features/actions) will make sure the html code is regenerated from the Jekyll pages. 
 
 Change the repo settings on github.com
 
