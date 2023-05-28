@@ -5,14 +5,14 @@ date:   2023-05-07 08:08:00 +0000
 categories: [jekyll]
 ---
 
-[0. Intro - Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-jekyll-intro %})
+[0. **Intro** - Building a blog site with Jekyll, Github pages and docker]({% post_url 2023-05-02-jekyll-intro %})
 
-[1. Testing a jekyll website with docker locally]({% post_url 2023-05-02-jekyll-docker-local-testing %})
+[1. Testing a jekyll website with **docker** locally]({% post_url 2023-05-02-jekyll-docker-local-testing %})
 
-[2. Publishing a Jekyll site with github pages]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
+[2. Publishing a Jekyll site with **github pages**]({% post_url 2023-05-03-publish-jekyll-page-to-github %})
 
-[3. Add google analytics to Jekyll pages minima theme]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
+[3. Add **google analytics** to Jekyll pages minima theme]({% post_url 2023-05-06-add-google-analytics-to-jekyll %})
 
-[4. Add google AdSense to Jekyll pages]({% post_url 2023-05-08-add-google-adsense-to-jekyll %})
+[4. Add **google AdSense** to Jekyll pages]({% post_url 2023-05-08-add-google-adsense-to-jekyll %})
 
-[5. Building a GDPR compliant Jekyll site]({% post_url 2023-05-14-jekyll-gdpr %})
+[5. Building a **GDPR compliant** Jekyll site]({% post_url 2023-05-14-jekyll-gdpr %})
