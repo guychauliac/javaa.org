@@ -6,12 +6,12 @@ categories: [jekyll]
 ---
 > [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
 
-In this blogpost we will have a look how docker can be used to locally test a Jekyll website.
+In this blogpost we will have a look how **docker** can be used to locally test a Jekyll website.
 
 ### Preparing a docker image
 
 Github pages can only be used with a [specific version of Ruby And Jekyll](https://pages.github.com/versions/). 
-Let's define a docker images that uses the Ruby 2.7 alpine images and use apk to install the Jekyll 3.9.3 Gem:
+Let's define a docker images that uses the **Ruby 2.7 alpine** image and use apk to install the Jekyll 3.9.3 Gem:
 
 Create a dockerfile:
 
