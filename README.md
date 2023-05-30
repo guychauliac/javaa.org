@@ -76,6 +76,7 @@ then serve jekyll
 https://github.com/orestbida/cookieconsent
 
 https://www.ethicalads.io/publishers/
+https://desiredpersona.github.io/minimal-jekyll-theme/docs/markdown/
 	
 
 

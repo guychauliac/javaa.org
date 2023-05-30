@@ -3,6 +3,7 @@ layout: post
 title:  "Testing a jekyll website with docker locally"
 date:   2023-05-02 19:24:31 +0000
 categories: [jekyll]
+next: test
 ---
 > [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
 
@@ -22,7 +23,7 @@ RUN apk add --no-cache build-base gcc cmake git
 RUN gem update --system && gem update bundler && gem install bundler jekyll:3.9.3
 {% endhighlight %}
 
-Now build the docker image:
+Build the docker image:
 
 {% highlight docker %}
 docker build -t jekyll .
@@ -37,7 +38,7 @@ docker run -it --name jekyllcontainer -p 8080:4000 -v /mnt/c/sitefolder:/usr/src
 -v /mnt/c/sitefolder:/usr/src will mount the local folder /c/sitefolder to the path /usr/src in the docker container
 {% endhighlight %}	
 
-I'm running docker on a windows systems, to make folder mounting to work correctly docker is running in 'linux containers' mode, WSL2 is activated and the command shown above is executed from the ubuntu Windows Subsystem for Linux shell.
+If docker is running on a windows systems, to make folder mounting work correctly docker must be running in 'linux containers' mode, WSL2 needs to be activated and the command shown above is executed from the ubuntu Windows Subsystem for Linux shell.
 
 ### Launch Jekyll in the container 
 	
@@ -62,7 +63,7 @@ cd mysite
 jekyll serve --host 0.0.0.0
 {% endhighlight %}	
 	
-'--hosts 0.0.0.0' will tell Jekyll to run on all network interfaces.  
+<kbd>'--hosts 0.0.0.0'</kbd> will tell Jekyll to run on all network interfaces.  
 
 Check on the host system if the Jekyll website can be reached by browsing to [http://localhost:8080](http://localhost:8080)
 
