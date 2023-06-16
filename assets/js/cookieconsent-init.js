@@ -38,7 +38,7 @@ cc.run({
     gui_options: {
         consent_modal: {
             layout: 'cloud',               // box/cloud/bar
-            position: 'middle center',     // bottom/middle/top + left/right/center
+            position: 'bottom center',     // bottom/middle/top + left/right/center
             transition: 'slide',           // zoom/slide
             swap_buttons: false            // enable to invert buttons
         },
