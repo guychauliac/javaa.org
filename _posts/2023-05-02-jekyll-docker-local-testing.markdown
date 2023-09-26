@@ -7,12 +7,12 @@ next: test
 ---
 > [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
 
-In this blogpost we will have a look how **docker** can be used to locally test a Jekyll website.
+This blogpost will explain how **docker** can be used to locally create and test a Jekyll website.
 
-### Preparing a docker image
+### Preparing a docker image and container
 
 Github pages can only be used with a [specific version of Ruby And Jekyll](https://pages.github.com/versions/). 
-Let's define a docker images that uses the **Ruby 2.7 alpine** image and use apk to install the Jekyll 3.9.3 Gem:
+Define a docker images that uses the **Ruby 2.7 alpine** image and use apk to install the Jekyll 3.9.3 Gem:
 
 Create a dockerfile:
 
@@ -28,36 +28,52 @@ Build the docker image:
 {% highlight docker %}
 docker build -t jekyll .
 {% endhighlight %}
-	
-Launch a shell in the docker container:
+
+Create the docker container
 
 {% highlight docker %}
-docker run -it --name jekyllcontainer -p 8080:4000 -v /mnt/c/sitefolder:/usr/src jekyll sh
-	
+docker container create -it --name jekyllcontainer -p 8080:4000 -v /mnt/c/sitefolder:/usr/src jekyll
+
+-it ensure to create a container that can be run in interactive mode
 -p 8080:4000 will map port 4000 inside of the container to port 8080 on the host
 -v /mnt/c/sitefolder:/usr/src will mount the local folder /c/sitefolder to the path /usr/src in the docker container
-{% endhighlight %}	
+{% endhighlight %}
 
 If docker is running on a windows systems, to make folder mounting work correctly docker must be running in 'linux containers' mode, WSL2 needs to be activated and the command shown above is executed from the ubuntu Windows Subsystem for Linux shell.
 
-### Launch Jekyll in the container 
-	
+### Launch the container and start an interactive shell
+Start the container
+{% highlight docker %}
+docker start jekyllcontainer
+{% endhighlight %}
+
+Login to the container with an interactive shell
+{% highlight docker %}
+docker exec -it jekyllcontainer sh
+{% endhighlight %}
+
+
+### Create a new Jekyll site 
+
 Within the shell of the container test if Jekyll 3.9.3 is correctly available
 
 {% highlight shell %}
 Jekyll --version
 {% endhighlight %}	
 	
-Navigate to the /usr/src folder and create our fresh Jekyll site
+Navigate to the /usr/src folder and create a fresh Jekyll site.  Ensure correct ruby gems are installed and unnecessary gems are removed.
 
 {% highlight shell %}
 cd /usr/src
 jekyll new mysite
+cd mysite
+bundle install
+bundle clean --force
 {% endhighlight %}	
 	
 A folder mysite is being created with several new files
-Go inside of the folder and start serving the Jekyll website
 
+### Start serving the Jekyll site
 {% highlight shell %}
 cd mysite
 jekyll serve --host 0.0.0.0
