@@ -6,7 +6,7 @@ categories: [jekyll]
 ---
 > [This blog post is part of a series around building a website with Jekyll for hosting on github pages]({% post_url 2023-05-07-jekyll %})
 
-In this post we will have look on how a jekyll website can be published on github pages.
+This post explains how a jekyll website can be published on github pages.
 
 ## Create github repository
 
