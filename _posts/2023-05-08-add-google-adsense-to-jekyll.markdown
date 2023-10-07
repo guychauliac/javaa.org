@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Adding advertising to Jekyll"
+title:  "Adding Advertising to Jekyll"
 date:   2023-05-08 18:37:00 +0000
 categories: [jekyll]
 ---

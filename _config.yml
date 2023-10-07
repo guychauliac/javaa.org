@@ -24,6 +24,7 @@ email: guy.chauliac@maxxq.org
 #  Blog site about topics of my interest: Java, Python, Docker, Security, OO Programming
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.maxxq.org"
+future: true
 
 #twitter_username: Chabernac
 github_username:  guychauliac
@@ -33,7 +34,7 @@ header_pages:
   - contact.md
 
 # Build settings
-remote_theme: jekyll/minima
+remote_theme: guychauliac/minima
 
 
 plugins:

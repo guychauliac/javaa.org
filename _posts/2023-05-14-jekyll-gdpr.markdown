@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a GDPR compliant Jekyll site"
+title:  "Building a GDPR Compliant Jekyll Site"
 date:   2023-05-14 19:45:00 +0000
 categories: [jekyll]
 ---

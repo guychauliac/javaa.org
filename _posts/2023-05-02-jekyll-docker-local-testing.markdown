@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing a jekyll website with docker locally"
+title:  "Testing a Jekyll Website with Docker Locally"
 date:   2023-05-02 19:24:31 +0000
 categories: [jekyll]
 next: test

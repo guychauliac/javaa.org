@@ -1,0 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.post-title h1 {
+  font-size: 2.0rem;
+}
