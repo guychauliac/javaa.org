@@ -125,7 +125,7 @@ Each test starts with <span class="highlighter-rouge">when()</span>, the impleme
 
 Methods <span class="highlighter-rouge">hourIs()</span>, <span class="highlighter-rouge">andHumidityIs()</span> are setting the current values for the hour and humidity and store them in the global instance of PlantWateringSystem. 
 
-The method <span class="highlighter-rouge">then()</span> will execute the <span class="highlighter-rouge">plantsNeedWater</span>and store the result is stored as a global variable <span class="highlighter-rouge">plantsAreWatered</span>.
+The method <span class="highlighter-rouge">then()</span> will execute the method <span class="highlighter-rouge">plantsNeedWater()</span>and store the result as a global variable <span class="highlighter-rouge">plantsAreWatered</span>.
 
 The method <span class="highlighter-rouge">plantsAreWatered(boolean)</span> will verify if the result corresponds to the expected value.  If desired multiple methods can be crafted to check for a correct outcome.
 
