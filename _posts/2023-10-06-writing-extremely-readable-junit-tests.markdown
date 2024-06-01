@@ -66,7 +66,7 @@ To keep things simple the current time and humidity can be set on the system wit
 
 Edge cases are tested with 2 tests:
 * <span class="underline">test 1</span> will verify if plants are only watered after 7PM.
-* <span class="underline">test 2</span> will verify if plants are only waterd if the humidity drops below 50%.
+* <span class="underline">test 2</span> will verify if plants are only watered if the humidity drops below 50%.
 
 
 {% highlight java %}

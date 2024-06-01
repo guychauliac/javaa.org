@@ -39,15 +39,15 @@ During my search for an easy way to build a cookie consent dialog I came across 
 
 The tutorial is very clear, these are the steps I did to include the cookie consent dialog on this Jekyll site
 
-**copy cookieconsent.js, cookieconsent-init.js and cookieconsent.css** and store them in /assets/js and /assets/css 
+**Copy cookieconsent.js, cookieconsent-init.js and cookieconsent.css** and store them in /assets/js and /assets/css.
 
-**copy [head.html](https://github.com/jekyll/minima/blob/master/_includes/head.html) from the minima theme** and store it in /_includes. Modify head.html, add the css stylesheet for the cookie consent dialog
+**Copy [head.html](https://github.com/jekyll/minima/blob/master/_includes/head.html) from the minima theme** and store it in /_includes. Modify head.html, add the css stylesheet for the cookie consent dialog.
 
 {% highlight html %}
 <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
 {% endhighlight %}
 
-**copy [base.html](https://github.com/jekyll/minima/blob/master/_layouts/base.html) from the minima theme** and store it in /_layouts. Modify base.html and add the following line just before </body>
+**Copy [base.html](https://github.com/jekyll/minima/blob/master/_layouts/base.html) from the minima theme** and store it in /_layouts. Modify base.html and add the following line just before  <span class="highlighter-rouge"></body></span>.
 
 {% highlight liquid %}
 {% raw %}
